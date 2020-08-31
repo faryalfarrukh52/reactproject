@@ -9,7 +9,7 @@ function App() {
         <
         Book book1 = "Harry Potter"
         book2 = "Angels and Demons"
-        book3 = "Titanic"
+        book3 = "Little Mermaid"
         book4 = "Oliver Twist" / >
 
         <
