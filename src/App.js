@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Message } from './Message.js';
 import './App.css';
-import Book from './Book.js';
 
 function App() {
-    return ( <
-        div className = "App" > {}
+
+    let [count, setCount] = useState(1);
+    let [Morning, setMorning] = useState(true);
+
+    return (
 
         <
-        Book book1 = "Harry Potter"
-        book2 = "Angels and Demons"
-        book3 = "Little Mermaid"
-        book4 = "Oliver Twist" / >
+        div className = { `box ${Morning ? 'light' : ''} ` } >
+
+        <
+        h1 > DayTime = { Morning ? 'Morning' : 'Night' } < /h1>
+
+        <
+        Message price = { count }
+        / >
+
+        <
+        button onClick = {
+            () => setCount(count + 1) //++count
+        } > Update Price < /button>
+
+        <
+        button onClick = {
+            () => setMorning(!Morning)
+        } > Press < /button>
 
         <
         /div>
-
     );
+
 }
 
 export default App;
